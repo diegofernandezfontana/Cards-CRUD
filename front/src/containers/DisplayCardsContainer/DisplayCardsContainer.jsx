@@ -6,6 +6,8 @@ import CardsList from '../../components/CardsList'
 
 import { removeCard } from '../../redux/actions/CardActions'
 
+import styles from './styles.css'
+
 export class DisplayCardsContainer extends Component {
     constructor(props) {
         super(props)
@@ -14,16 +16,14 @@ export class DisplayCardsContainer extends Component {
     }
 
     removeCard(idx){
-        console.log(idx)
         this.props.removeCard(idx)
     }
 
     render() {
         return (
-            <div>
-                <h1>Lista de cartas</h1>
+            <div className={styles.container}>
+            <button className={styles.agregarCarta}>  <Link to='/Agregar'><i class="fas fa-plus"></i> Agregar carta</Link> </button>
                 <CardsList cardsList={this.props.cardsList} removeCard={this.removeCard}/>
-                <button> <Link to='/Agregar'> Agregar carta</Link> </button>
                 
             </div>
         )

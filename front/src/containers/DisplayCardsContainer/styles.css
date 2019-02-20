@@ -1,4 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+.container .agregarCarta {
+  background-color: green;
+  padding: 10px;
+  border: 1px solid green;
+}
+.container .agregarCarta a {
+  color: white;
+}
+
 .cardsContainer {
+  max-width: 95%;
+  margin-left: 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -6,9 +26,11 @@
 .cardsContainer .singleCard {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-width: 20%;
   max-width: 20%;
   border: 1px solid #e6e6e6;
+  background-color: white;
   color: #454545;
   margin: 10px;
   border-radius: 3px;
@@ -22,6 +44,11 @@
   object-fit: cover;
   border-radius: 3px 3px 0 0;
 }
+.cardsContainer .singleCard .cardDescripcion {
+  max-height: 120px;
+  min-height: 120px;
+  overflow: hidden;
+}
 .cardsContainer .singleCard h1 {
   padding: 10px;
   overflow: hidden;
@@ -33,6 +60,28 @@
   max-width: 90%;
   margin: 0 auto;
   padding-bottom: 10px;
+}
+.cardsContainer .singleCard .botones button {
+  padding: 10px;
+  min-width: 50%;
+}
+.cardsContainer .singleCard .botones .deleteCard {
+  background-color: white;
+  border: 0px;
+  color: #873d3d;
+  border-right: 1px solid #e6e6e6;
+}
+.cardsContainer .singleCard .botones .deleteCard:hover {
+  cursor: pointer;
+}
+.cardsContainer .singleCard .botones .editCard {
+  color: blue;
+  border: 0px;
+  background-color: white;
+}
+.cardsContainer .singleCard .botones .editCard:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */

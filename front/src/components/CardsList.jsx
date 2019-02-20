@@ -1,8 +1,7 @@
 import React from 'react'
-
 import styles from '../containers/DisplayCardsContainer/styles.css'
 
-export default ({cardsList, removeCard}) => (
+export default ({cardsList, removeCard, editCard}) => (
     <div className={styles.cardsContainer}>
             {
                 cardsList.map((card, idx) =>{
@@ -11,13 +10,19 @@ export default ({cardsList, removeCard}) => (
                             <div>
                                 <img src={card.img}></img>
                             </div>
-                            <div>
+                            <div className={styles.cardDescripcion}>
                                 <h1 >{ card.titulo } </h1>
                                 <p> {card.descripcion} </p>
-                                <button onClick={() => removeCard(idx)}>
-                                    Eliminar tarejta
-                                </button>           
+                                     
                             </div>     
+                            <div className={styles.botones}>
+                                <button className={styles.deleteCard} onClick={() => removeCard(idx)}>
+                                    <i class="fas fa-trash"> Eliminar </i>
+                                </button>      
+                                <button className={styles.editCard} onClick={() => editCard()}>
+                                    Editar tarejta
+                                </button>      
+                            </div>
                         </div>
                     )
                 })

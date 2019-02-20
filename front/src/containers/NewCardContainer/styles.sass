@@ -1,0 +1,47 @@
+$gris-claro: #e6e6e6
+$verde-aceptar: #3a7d32
+$verde-aceptar-hov: #4ea444
+$background-grey: #f2f2f2
+$negro-font: #454545
+
+.newCardContainer
+    display: flex
+    justify-content: center
+    flex-direction: row
+    background-color: $background-grey
+    border: 1px solid $gris-claro
+    .singleCard
+        background-color: white
+        border: 1px solid $gris-claro
+        display: flex
+        flex-direction: column
+        padding: 40px
+        min-width: 300px
+        form
+            display: flex
+            flex-direction: column
+            h1
+                text-align: center
+                color: $negro-font
+                margin: 0px
+                margin-bottom: 20px
+            input
+                color: $negro-font
+                border: 0px
+                outline: 0
+                border-bottom: 1px solid $gris-claro
+                padding: 10px
+                margin-bottom: 10px
+            button
+                margin-top: 10px
+                padding: 15px
+                background-color: $verde-aceptar
+                border: 1px solid $verde-aceptar
+                border-radius: 3px
+                color: white
+                transition-duration: 0.3s
+                &:hover
+                    cursor: pointer
+                    border: 1px solid $verde-aceptar-hov
+                    background-color: $verde-aceptar-hov
+                    transition-duration: 0.3s

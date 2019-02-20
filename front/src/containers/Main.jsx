@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
+
+import DisplayCardsContainer from './DisplayCardsContainer/DisplayCardsContainer'
+import NewCardContainer from './NewCardContainer/NewCardContainer'
+import NotFound from './NotFound/NotFound'
 
 class Main extends Component {
     constructor(props) {
-        super(props);   
+        super(props);
     }
-    
+
     render() {
         return (
             <div>
-                <h1>Funciona!</h1>
+                <Switch>
+                    <Route exact path='/Agregar' component={NewCardContainer} />
+                    <Route exact path='/' component={DisplayCardsContainer} />
+                    <Route path='/' component={NotFound} />
+                    
+                </Switch>
             </div>
         );
     }
@@ -17,11 +27,11 @@ class Main extends Component {
 
 
 const mapStateToProps = (state) => ({
-  
+
 })
 
 const mapDispatchToProps = {
-  
+
 }
 
 

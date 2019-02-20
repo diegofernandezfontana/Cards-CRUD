@@ -6,9 +6,24 @@ import DisplayCardsContainer from './DisplayCardsContainer/DisplayCardsContainer
 import NewCardContainer from './NewCardContainer/NewCardContainer'
 import NotFound from './NotFound/NotFound'
 
+import { setStateByStorage } from '../redux/actions/CardActions'
+
 class Main extends Component {
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount(){
+       this.getLocalStorage()
+    }
+
+    getLocalStorage(){
+        //Se corre en el didMount
+        //Se fija si auxStorage esta dentro del localStorage con la key 'cardslist'
+        var auxStorage= JSON.parse(localStorage.getItem("cardsList"))
+        if(auxStorage && this.props.cardsList.length == 0){
+            this.props.setStateByStorage(auxStorage.cardsReducer.cards  )
+        }
     }
 
     render() {
@@ -27,11 +42,15 @@ class Main extends Component {
 
 
 const mapStateToProps = (state) => ({
-
+    cardsList: state.cardsReducer.cards
 })
 
-const mapDispatchToProps = {
-
+const mapDispatchToProps = dispatch => {
+    return{
+        setStateByStorage:function(localStorageCards){
+            dispatch(setStateByStorage(localStorageCards))
+        }
+    }
 }
 
 

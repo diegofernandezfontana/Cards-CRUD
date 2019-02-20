@@ -1,0 +1,38 @@
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.cardsContainer .singleCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  max-width: 20%;
+  border: 1px solid #e6e6e6;
+  color: #454545;
+  margin: 10px;
+  border-radius: 3px;
+}
+.cardsContainer .singleCard img {
+  margin: 0 auto;
+  min-width: 99.999%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+.cardsContainer .singleCard h1 {
+  padding: 10px;
+  overflow: hidden;
+  margin: 0px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.cardsContainer .singleCard p {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -6,7 +6,6 @@ export const addCard = card => {
         setLocalStorage(getState())
     }
 };
-
 const add_card_to_state = function (card) {
     return {
         type: "ADD_CARD",
@@ -14,14 +13,30 @@ const add_card_to_state = function (card) {
     }
 }
 
-export const removeCard = (cardIdx) => {
-    return dispatch =>
-        dispatch({
-            type: "REMOVE_CARD",
-            payload: cardIdx
-        })
+export const removeCard = (cardID) => {
+    return(dispatch,getState) =>{
+        dispatch(remove_card_from_state(cardID))
+        setLocalStorage(getState())
+    }
+}
+const remove_card_from_state = function (cardID){
+    return{
+        type: "REMOVE_CARD",
+        payload: cardID
+    }
 }
 
+export const orderList = (arrList) => {
+    return dispatch => {
+        dispatch(order_cards_to_state(arrList))
+    }
+}
+const order_cards_to_state = function(arrCardsOrdered){
+    return {
+        type: "ORDER_LIST",
+        payload: arrCardsOrdered
+    }
+}
 
 //SETEO DE LOCALSTORAGE
 

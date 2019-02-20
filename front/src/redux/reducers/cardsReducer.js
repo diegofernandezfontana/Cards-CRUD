@@ -1,20 +1,39 @@
 
 const initialSate ={
-    cards:[]
+    cards:[],
+    cardsOrdered: []
 };
 
 
 export default (state = initialSate, action)=>{
     switch (action.type) {
-        case "ADD_CARD":
-            return Object.assign({}, state, {cards: [...state.cards , action.payload]})
-        case "REMOVE_CARD":
-            let currentState = state.cards;
-            let newState = currentState.splice(action.payload)
-            return Object.assign({}, state, {cards: currentState})
         case "ADD_STORAGE_TO_STATE":
-            console.log("EMTRRO AL REDUCER")
+            //Checkea si hay algo en localstorage, si hay lo setea en el store
             return Object.assign({}, state, {cards: action.storage})
+
+        case "ADD_CARD":
+            //agregar card al arreglo cards pusheandolo al final
+            return Object.assign({}, state, {cards: [...state.cards , action.payload]})
+
+        case "REMOVE_CARD":
+            //Chequea el estado con findIndex(card.id)
+                //El elemento con id que coincida es eliminado del array. 
+            let newState = state.cards;
+            let newStateOrdered = state.cardsOrdered;
+
+            let itemToDelete = state.cards.findIndex(elem => elem.id == action.payload);
+            newState.splice(itemToDelete, 1)
+            itemToDelete = state.cardsOrdered.findIndex(elem => elem.id == action.payload)
+            newStateOrdered.splice(itemToDelete, 1)
+            return Object.assign({}, state, 
+                {
+                    cards: newState,
+                    cardsOrdered: newStateOrdered
+                })
+        
+        case "ORDER_LIST":
+            return Object.assign({}, state, {cardsOrdered: action.payload})
+
         default:
             return state;
     }

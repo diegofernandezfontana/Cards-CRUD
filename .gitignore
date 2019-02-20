@@ -1,0 +1,6 @@
+back/node_modules/
+front/node_modules/
+front/dist/bundle.js
+front/dist/bundle.map.js
+front/npm-debug.log
+node_modules

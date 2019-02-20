@@ -1,0 +1,25 @@
+{
+  "name": "Cards-CRUD",
+  "version": "1.0.0",
+  "description": "Cards game for tiendeo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegofernandezfontana/Cards-CRUD"
+  },
+  "author": "Diego Fernandez Fontana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegofernandezfontana/Cards-CRUD"
+  },
+  "homepage": "https://github.com/diegofernandezfontana/Cards-CRUD",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}

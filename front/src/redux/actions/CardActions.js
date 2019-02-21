@@ -26,6 +26,20 @@ const remove_card_from_state = function (cardID){
     }
 }
 
+export const editCard = (card) => {
+    return(dispatch, getState) => {
+        dispatch(edit_card_from_state(card))
+        setLocalStorage(getState())
+    }
+}
+
+const edit_card_from_state = function(card){
+    return {
+        type: "UPDATE_CARD",
+        payload: card
+    }
+}
+
 export const orderList = (arrList) => {
     return dispatch => {
         dispatch(order_cards_to_state(arrList))

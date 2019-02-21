@@ -15,7 +15,7 @@
   padding: 40px;
   min-width: 300px;
   border-radius: 3px;
-  max-height: 250px;
+  max-height: 300px;
 }
 .newCardContainer .singleCard form {
   display: flex;
@@ -35,7 +35,9 @@
   padding: 10px;
   margin-bottom: 10px;
 }
-.newCardContainer .singleCard form button {
+.newCardContainer .singleCard form .botonsubmit {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
   padding: 15px;
   background-color: #3a7d32;
@@ -44,11 +46,19 @@
   color: white;
   transition-duration: 0.3s;
 }
-.newCardContainer .singleCard form button:hover {
+.newCardContainer .singleCard form .botonsubmit:hover {
   cursor: pointer;
   border: 1px solid #4ea444;
   background-color: #4ea444;
   transition-duration: 0.3s;
+}
+.newCardContainer .singleCard form .botonBack {
+  background-color: white;
+  border: 0px;
+  padding-top: 10px;
+}
+.newCardContainer .singleCard form .botonBack a {
+  color: #454545;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -5,7 +5,6 @@ import NewCard from '../../components/NewCard'
 
 import { addCard } from '../../redux/actions/CardActions'
 
-const uuidv5 = require('uuid/v5');
 
 export class NewCardContainer extends Component {
     constructor(props){
@@ -30,8 +29,8 @@ export class NewCardContainer extends Component {
             if(formulario.descripcion != ''){
                 if(formulario.img == ''){
                     formulario.img = 'https://www.biography.com/.image/t_share/MTQ4MDU5NDU0MzgwNzEzNDk0/lionel_messi_photo_josep_lago_afp_getty_images_664928892_resizedjpg.jpg'
-                    formulario.titulo = formulario.titulo.toLocaleLowerCase();
                 }
+                formulario.titulo = formulario.titulo.toLocaleLowerCase();
                 formulario.id = key
                 this.props.addCard(formulario)
                 this.props.history.push('/')
@@ -57,7 +56,9 @@ export class NewCardContainer extends Component {
                     handleChange={this.handleChange}
                     titulo={this.state.titulo}
                     descripcion={this.state.descripcion}
-                    img={this.state.img}    
+                    img={this.state.img}  
+                    headerH1={'Agregar tarjeta'}
+                    button={"Agregar"}  
                 />
             </div>
         )

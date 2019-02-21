@@ -20,7 +20,7 @@ $negro-font: #454545
         padding: 40px
         min-width: 300px
         border-radius: 3px
-        max-height: 250px
+        max-height: 300px
         form
             display: flex
             flex-direction: column
@@ -36,7 +36,10 @@ $negro-font: #454545
                 border-bottom: 1px solid $gris-claro
                 padding: 10px
                 margin-bottom: 10px
-            button
+            .botonsubmit
+                display: flex
+                justify-content: center
+
                 margin-top: 10px
                 padding: 15px
                 background-color: $verde-aceptar
@@ -49,3 +52,9 @@ $negro-font: #454545
                     border: 1px solid $verde-aceptar-hov
                     background-color: $verde-aceptar-hov
                     transition-duration: 0.3s
+            .botonBack
+                background-color: white
+                border: 0px
+                padding-top: 10px
+                a
+                    color: $negro-font

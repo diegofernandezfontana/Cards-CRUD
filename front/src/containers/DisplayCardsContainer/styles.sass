@@ -10,12 +10,22 @@ $rojo-eliminar: #873d3d
 .container
     background-color: #f4f4f4
     min-height: 100vh
+    font-family: sans-serif
+    .containerBotones
+        max-width: 95%
+        margin-left: 10%
     .agregarCarta
-        background-color: green
+        background-color: white
         padding: 10px
-        border: 1px solid green
+        border: 1px solid $gris-claro
+        border-radius: 3px
+        margin: 10px
+        color: $negro-font
         a
-            color: white
+            color: $negro-font
+            text-decoration: none
+        &:hover
+            cursor: pointer
 
 .cardsContainer
     max-width: 95%
@@ -63,14 +73,18 @@ $rojo-eliminar: #873d3d
             .deleteCard
                 background-color: white
                 border: 0px
-                color: $rojo-eliminar
+                color: $negro-font
                 border-right: 1px solid $gris-claro
+                transition-duration: 0.3s
                 &:hover
+                    text-decoration: underline
                     cursor: pointer
             .editCard
-                color: blue
                 border: 0px
                 background-color: white
+                a
+                    text-decoration: none
+                    color: $negro-font
                 &:hover
                     cursor: pointer
                     text-decoration: underline

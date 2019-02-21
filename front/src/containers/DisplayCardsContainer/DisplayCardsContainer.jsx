@@ -12,45 +12,49 @@ import styles from './styles.css'
 export class DisplayCardsContainer extends Component {
     constructor(props) {
         super(props)
-        this.removeCard = this.removeCard.bind(this)
+        this.removeCard = this.removeCard.bind(this) 
+        this.orderAsc = this.orderAsc.bind(this)
+        this.orderDesc = this.orderDesc.bind(this)
     }
 
     orderAsc(cardsList){
+        //Ordena el estado de forma asc
         let cardsOrderAsc = _.orderBy(cardsList, ['titulo'],['asc'])
         this.props.orderList(cardsOrderAsc)
-        this.props.history.push('/')
-
     }
 
     orderDesc(cardsList){
+        //Ordena el estado de forma desc
         let cardsOrderDesc = _.orderBy(cardsList, ['titulo'],['desc'])
         this.props.orderList(cardsOrderDesc)
-
     }
 
     removeCard(cardID){
+        //Elimina la carta con el ID de la carta
         this.props.removeCard(cardID)
         this.props.history.push('/')
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className={styles.container}>
-                <button className={styles.agregarCarta}>  
-                    <Link to='/Agregar'><i className="fas fa-plus"></i> Agregar carta</Link> 
-                </button>
-                <button className={styles.agregarCarta} onClick={() => this.orderAsc(this.props.cardsList)}>  
-                   Ordenar Ascendente
-                </button>
-                <button className={styles.agregarCarta} onClick={() => this.orderDesc(this.props.cardsList)} >  
-                    <i className="fas fa-plus"></i> Ordenar Descendiente 
-                </button>
 
-                {this.props.cardsListOrder.length > 0 && this.props.cardsListOrder.length == this.props.cardsList.length ? 
-                <CardsList cardsList={this.props.cardsListOrder} removeCard={this.removeCard}/>
-                : 
-                <CardsList cardsList={this.props.cardsList} removeCard={this.removeCard}/>
+                {
+                    this.props.cardsListOrder.length > 0 && this.props.cardsListOrder.length == this.props.cardsList.length ? 
+                        <CardsList 
+                            cardsList={this.props.cardsListOrder}
+                            removeCard={this.removeCard} 
+                            editCard={this.editCard}
+                            orderAsc={this.orderAsc}
+                            orderDesc={this.orderDesc}
+                        />
+                    : 
+                        <CardsList cardsList={this.props.cardsList} 
+                            removeCard={this.removeCard} 
+                            editCard={this.editCard}
+                            orderAsc={this.orderAsc}
+                            orderDesc={this.orderDesc}
+                        />
                 }
             </div>
         )

@@ -6,14 +6,26 @@
 .container {
   background-color: #f4f4f4;
   min-height: 100vh;
+  font-family: sans-serif;
+}
+.container .containerBotones {
+  max-width: 95%;
+  margin-left: 10%;
 }
 .container .agregarCarta {
-  background-color: green;
+  background-color: white;
   padding: 10px;
-  border: 1px solid green;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin: 10px;
+  color: #454545;
 }
 .container .agregarCarta a {
-  color: white;
+  color: #454545;
+  text-decoration: none;
+}
+.container .agregarCarta:hover {
+  cursor: pointer;
 }
 
 .cardsContainer {
@@ -68,16 +80,21 @@
 .cardsContainer .singleCard .botones .deleteCard {
   background-color: white;
   border: 0px;
-  color: #873d3d;
+  color: #454545;
   border-right: 1px solid #e6e6e6;
+  transition-duration: 0.3s;
 }
 .cardsContainer .singleCard .botones .deleteCard:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 .cardsContainer .singleCard .botones .editCard {
-  color: blue;
   border: 0px;
   background-color: white;
+}
+.cardsContainer .singleCard .botones .editCard a {
+  text-decoration: none;
+  color: #454545;
 }
 .cardsContainer .singleCard .botones .editCard:hover {
   cursor: pointer;

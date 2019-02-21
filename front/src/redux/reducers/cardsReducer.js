@@ -31,9 +31,20 @@ export default (state = initialSate, action)=>{
                     cardsOrdered: newStateOrdered
                 })
         
+        case "UPDATE_CARD":
+            // Setea update state a state.cards
+                //Se fija en state.cards que elem coinice el id con el que se envio desde la lista
+                    //El que coincide se updatea con el action.payload
+            let updateState = state.cards;
+            let itemToEDIT = state.cards.findIndex(elem => elem.id == action.payload.id)
+            updateState[itemToEDIT] = action.payload
+            updateState[itemToEDIT].titulo = updateState[itemToEDIT].titulo.toLowerCase()
+            
+            return Object.assign({}, state, { cards: updateState})
+
         case "ORDER_LIST":
             return Object.assign({}, state, {cardsOrdered: action.payload})
-
+        
         default:
             return state;
     }

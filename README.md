@@ -31,7 +31,7 @@ INICIAR:
 
 Using boilerplate: https://github.com/diegofernandezfontana/reactBoiler
 
-How to start?
+How to start? 
 
 1- Clone repo.
 
@@ -46,3 +46,8 @@ How to start?
 5- Open http://localhost:3000/
 
 6- Try the App.
+
+En caso de que no funcione se necesita tener instalado Nodemon 
+instalarlo en ./front con npm install --save nodemon
+instalarlo en ./back con npm install --save nodemon
+

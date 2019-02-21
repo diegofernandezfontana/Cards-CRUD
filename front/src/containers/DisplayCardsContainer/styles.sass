@@ -67,9 +67,14 @@ $rojo-eliminar: #873d3d
             margin: 0 auto
             padding-bottom: 10px
         .botones
+            display: flex
+            justify-content: center
+            min-width: 95%
+            max-width: 99%
             button
                 padding: 10px
-                min-width: 50%
+                min-width: 45%
+                max-width: 50%
             .deleteCard
                 background-color: white
                 border: 0px
@@ -88,4 +93,27 @@ $rojo-eliminar: #873d3d
                 &:hover
                     cursor: pointer
                     text-decoration: underline
-                
+
+@media (max-width: 700px) 
+    .cardsContainer
+        max-width: 95%
+        .singleCard
+            min-width: 40%
+            h1
+                font-size: 1.2em
+            p
+                font-size: 0.8em
+            .botones
+                min-width: 95%
+                button
+                    min-width: 45%
+
+@media (max-width: 425px) 
+    .container
+        .containerBotones
+            margin-left: 5%
+    .cardsContainer
+        margin-left: 5%
+        .singleCard
+            min-width: 90%
+            max-width: 90%

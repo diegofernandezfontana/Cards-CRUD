@@ -73,9 +73,16 @@
   margin: 0 auto;
   padding-bottom: 10px;
 }
+.cardsContainer .singleCard .botones {
+  display: flex;
+  justify-content: center;
+  min-width: 95%;
+  max-width: 99%;
+}
 .cardsContainer .singleCard .botones button {
   padding: 10px;
-  min-width: 50%;
+  min-width: 45%;
+  max-width: 50%;
 }
 .cardsContainer .singleCard .botones .deleteCard {
   background-color: white;
@@ -99,6 +106,40 @@
 .cardsContainer .singleCard .botones .editCard:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .cardsContainer {
+    max-width: 95%;
+  }
+  .cardsContainer .singleCard {
+    min-width: 40%;
+  }
+  .cardsContainer .singleCard h1 {
+    font-size: 1.2em;
+  }
+  .cardsContainer .singleCard p {
+    font-size: 0.8em;
+  }
+  .cardsContainer .singleCard .botones {
+    min-width: 95%;
+  }
+  .cardsContainer .singleCard .botones button {
+    min-width: 45%;
+  }
+}
+@media (max-width: 425px) {
+  .container .containerBotones {
+    margin-left: 5%;
+  }
+
+  .cardsContainer {
+    margin-left: 5%;
+  }
+  .cardsContainer .singleCard {
+    min-width: 90%;
+    max-width: 90%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

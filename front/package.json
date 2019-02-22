@@ -4,7 +4,7 @@
   "description": "Cards game for Tiendeo",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./tests/*.spec.js --watch --compilers js:babel-register",
     "start": "webpack --watch"
   },
   "repository": {
@@ -36,6 +36,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "jest": "^24.1.0",
     "webpack": "^3.11.0"
   }
 }

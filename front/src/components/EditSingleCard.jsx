@@ -62,7 +62,7 @@ class EditSingleCard extends Component {
                                 onAfterOpen={this.afterOpenModal}
                                 onRequestClose={this.closeModal}
                                 style={customStyles}
-                                contentLabel="Example Modal"
+                                contentLabel=""
                             >
                                 <EditCardContainer closeModal={this.closeModal} cardID={card.id} card={card} />
                             </Modal>

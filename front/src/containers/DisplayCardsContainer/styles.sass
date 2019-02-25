@@ -44,6 +44,13 @@ $rojo-eliminar: #873d3d
         color: $negro-font
         margin: 10px
         border-radius: 3px
+        &:hover
+            .botones
+                display: flex
+                .deleteCard, .editCard
+                    transition-duration: 0.3s
+                    color: $negro-font
+                    cursor: pointer
         img
             margin: 0 auto
             min-width: 99.999%
@@ -79,19 +86,17 @@ $rojo-eliminar: #873d3d
                 background-color: white
                 border: 0px
                 color: $negro-font
-                border-right: 1px solid $gris-claro
-                transition-duration: 0.3s
+                color: white
                 &:hover
                     text-decoration: underline
-                    cursor: pointer
+                    //cursor: pointer
             .editCard
                 border: 0px
                 background-color: white
                 text-decoration: none
-                color: $negro-font
-                a
+                color: white
+                //color: $negro-font
                 &:hover
-                    cursor: pointer
                     text-decoration: underline
 
 @media (max-width: 700px) 

@@ -34,6 +34,7 @@ export default (state = initialSate, action)=>{
         case "UPDATE_CARD":
             var cardsArr = state.cards;
             var editedItem = action.payload; 
+            editedItem.titulo = editedItem.titulo.toLowerCase()
             // itemToEDIT = indice en cardsArr donde el El item a editar conicida el id 
             let itemToEDIT = cardsArr.findIndex(elem => elem.id == editedItem.id)
 

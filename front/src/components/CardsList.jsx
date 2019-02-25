@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import styles from '../containers/DisplayCardsContainer/styles.css'
 
-import { Link } from 'react-router-dom'
-
 import Modal from 'react-modal';
+
 import NewCardContainer from '../containers/NewCardContainer/NewCardContainer'
 import EditSingleCard from '../components/EditSingleCard'
 
@@ -73,7 +72,7 @@ export class CardsList extends Component {
                     {
                         cardsList.map((card) => {
                             return (
-                                <EditSingleCard card={card} removeCard={removeCard}/>
+                                <EditSingleCard key={card.id} card={card} removeCard={removeCard}/>
                             )
                         })
                     }

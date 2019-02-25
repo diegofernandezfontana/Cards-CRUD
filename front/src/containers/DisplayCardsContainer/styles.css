@@ -47,6 +47,14 @@
   margin: 10px;
   border-radius: 3px;
 }
+.cardsContainer .singleCard:hover .botones {
+  display: flex;
+}
+.cardsContainer .singleCard:hover .botones .deleteCard, .cardsContainer .singleCard:hover .botones .editCard {
+  transition-duration: 0.3s;
+  color: #454545;
+  cursor: pointer;
+}
 .cardsContainer .singleCard img {
   margin: 0 auto;
   min-width: 99.999%;
@@ -88,21 +96,18 @@
   background-color: white;
   border: 0px;
   color: #454545;
-  border-right: 1px solid #e6e6e6;
-  transition-duration: 0.3s;
+  color: white;
 }
 .cardsContainer .singleCard .botones .deleteCard:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
 .cardsContainer .singleCard .botones .editCard {
   border: 0px;
   background-color: white;
   text-decoration: none;
-  color: #454545;
+  color: white;
 }
 .cardsContainer .singleCard .botones .editCard:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 

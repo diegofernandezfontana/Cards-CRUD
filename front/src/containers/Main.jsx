@@ -35,7 +35,7 @@ class Main extends Component {
                     <Route exact path='/Agregar' component={NewCardContainer} />
                     <Route exact path='/EditCard/:id' component={EditCardContainer} />
                     <Route exact path='/' component={DisplayCardsContainer} />
-                    <Route path='/' component={NotFound} /> 
+                    <Route path='/*' component={NotFound} /> 
                 </Switch>
             </div>
         );

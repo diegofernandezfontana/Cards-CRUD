@@ -19,6 +19,7 @@ export class EditCardContainer extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     componentDidMount() {
+        //Setea el estado por el card que llega en props
         var cardIdToEdit = this.props.cardID
         if (this.state.titulo == '') {
             let cardToEdit = _.find(this.props.cardsList, function (card) {
@@ -50,11 +51,10 @@ export class EditCardContainer extends Component {
     }
 
     render() {
-        console.log(this.props)
-        //console.log(this.props, 'THIS.PROPS')
         return (
             <div>
                 {
+                    //# NewCard se usa para editar y para agregar
                     <NewCard
                         editCard={this.editCard}
                         handleChange={this.handleChange}

@@ -42,8 +42,6 @@ export class CardsList extends Component {
         this.setState({ modalIsOpen1: false });
     }
 
-
-
     render() {
         let { cardsList, removeCard, editCard, orderDesc, orderAsc } = this.props;
         return (

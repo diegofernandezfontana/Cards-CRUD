@@ -33,10 +33,11 @@ export default (state = initialSate, action)=>{
         
         case "UPDATE_CARD":
             var cardsArr = state.cards;
-            var editedItem = action.payload;
-            console.log(editedItem)
+            var editedItem = action.payload; 
+            // itemToEDIT = indice en cardsArr donde el El item a editar conicida el id 
             let itemToEDIT = cardsArr.findIndex(elem => elem.id == editedItem.id)
-            console.log(itemToEDIT)
+
+            //updateState toma el state.cards y se edita el subindice por el item editado (editedItem)
             var updatedState = cardsArr;
             updatedState[itemToEDIT] = editedItem;
             

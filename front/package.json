@@ -4,8 +4,11 @@
   "description": "Cards game for Tiendeo",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./tests/*.spec.js --watch --compilers js:babel-register",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "test": "mocha ./tests/*.spec.js --watch --compilers js:babel-register"
+  },
+  "jest": {
+    "verbose": true
   },
   "engines": {
     "node": "8.10.0",
@@ -24,6 +27,7 @@
   "dependencies": {
     "css-loader": "^1.0.1",
     "lodash": "^4.17.11",
+    "mocha": "^6.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-modal": "^3.8.1",

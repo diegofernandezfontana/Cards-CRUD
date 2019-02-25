@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import styles from '../containers/NewCardContainer/styles.css'
 
 export default ({handleSubmit, handleChange, titulo, img, descripcion, button, headerH1, closeModal}) => (
+
+    //Este componente se usa para crear y editar cards
     <React.Fragment>
 
     <div className={styles.newCardContainer}>

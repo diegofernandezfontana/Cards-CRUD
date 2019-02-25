@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import Modal from 'react-modal';
 
 import styles from '../containers/DisplayCardsContainer/styles.css'
 
 import EditCardContainer from '../containers/EditCardContainer/EditCardContainer'
 
-import Modal from 'react-modal';
 
 const customStyles = {
     content: {
@@ -18,6 +18,8 @@ const customStyles = {
         border: '0px'
     }
 };
+
+
 class EditSingleCard extends Component {
     constructor(props) {
         super(props)
@@ -38,7 +40,6 @@ class EditSingleCard extends Component {
     }
 
     render() {
-        //console.log(this.props)
         var {card, removeCard} = this.props
         return (
             <React.Fragment>

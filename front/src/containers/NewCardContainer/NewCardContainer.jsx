@@ -33,7 +33,7 @@ export class NewCardContainer extends Component {
                 formulario.titulo = formulario.titulo.toLocaleLowerCase();
                 formulario.id = key
                 this.props.addCard(formulario)
-                this.props.history.push('/')
+                this.props.closeModal();
             }else{
                 alert('Por favor ingrese descripcion')
             }

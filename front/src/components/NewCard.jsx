@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import styles from '../containers/NewCardContainer/styles.css'
 
-export default ({handleSubmit, handleChange, titulo, img, descripcion, button, headerH1}) => (
+export default ({handleSubmit, handleChange, titulo, img, descripcion, button, headerH1, closeModal}) => (
     <React.Fragment>
 
     <div className={styles.newCardContainer}>
@@ -19,10 +19,8 @@ export default ({handleSubmit, handleChange, titulo, img, descripcion, button, h
                 <button className={styles.botonsubmit} type='submit'>
                     <p>{button} </p>
                 </button>
-                <button className={styles.botonBack}>
-                    <Link to='/'>
-                        Go back
-                    </Link>
+                <button className={styles.botonBack} onClick={closeModal}>
+                    Cerrar
                 </button>
                 
             </form>

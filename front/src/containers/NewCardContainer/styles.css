@@ -4,7 +4,6 @@
   flex-direction: row;
   background-color: #f2f2f2;
   border: 1px solid #e6e6e6;
-  min-height: 100vh;
   padding: 20px;
 }
 .newCardContainer .singleCard {
@@ -56,8 +55,6 @@
   background-color: white;
   border: 0px;
   padding-top: 10px;
-}
-.newCardContainer .singleCard form .botonBack a {
   color: #454545;
 }
 

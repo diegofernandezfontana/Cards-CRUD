@@ -49,6 +49,7 @@ export class NewCardContainer extends Component {
     }
 
     render() {
+        var {closeModal} = this.props
         return (
             <div>
                 <NewCard 
@@ -58,7 +59,9 @@ export class NewCardContainer extends Component {
                     descripcion={this.state.descripcion}
                     img={this.state.img}  
                     headerH1={'Agregar tarjeta'}
-                    button={"Agregar"}  
+                    button={"Agregar"} 
+                    
+                    closeModal={closeModal} 
                 />
             </div>
         )
